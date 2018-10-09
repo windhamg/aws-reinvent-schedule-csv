@@ -84,6 +84,8 @@ for session in session_tbl:
     part1 = r.text.partition('[{')[2]
     part2 = part1.partition('}]')[0]
     sch = json.loads("{%s}" % part2.replace('\\',''))
+    if 'startTime' not in sch:
+        continue
     start = datetime.strptime("%s 2018" % sch['startTime'], '%A, %b %d, %I:%M %p %Y')
     end_parts = sch['endTime'].split(':')
     end_hour = int(end_parts[0])

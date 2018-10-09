@@ -67,6 +67,7 @@ for session in session_tbl:
     session_code, session_title = [i.get_text().strip() for i in name_parts]
     session_code = re.sub(' -$', '', session_code)
     match = re.match(".*\-R(\d+)?$", session_code)
+    session_code = session_code.split('-')[0]
     repeat = '-'
     if match is not None:
         if match.lastindex is None:

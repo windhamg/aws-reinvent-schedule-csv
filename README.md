@@ -26,6 +26,7 @@ This script will parse your AWS re:Invent 2018 "Interests" list and provide a CS
 * you can import the resulting CSV to an Excel spreadsheet, load it into a SQL database, or whatever you desire
 
 **bonus materials**
+
 While you can use the resulting CSV file with any tool of your choice, I loaded it into a MySQL database. Included are some MySQL scripts that can help with loading the data and querying it:
 
 * `fn_get_distance.sql` creates a function (`FN_GET_DISTANCE`) and loads GPS coordinates of the re:Invent session venues into a table that can be used in your queries to see distances between a particular session venue and all the other venues.

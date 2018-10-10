@@ -2,7 +2,7 @@
 -- Create function to return distance (in miles) between two lat/long pairs
 --
 
-DROP FUNCTION IF EXISTS `FN_GET_DISTANCE`
+DROP FUNCTION IF EXISTS `FN_GET_DISTANCE`;
 CREATE FUNCTION `FN_GET_DISTANCE`(lat1 DOUBLE, lng1 DOUBLE, lat2 DOUBLE, lng2 DOUBLE) RETURNS double
 BEGIN
     DECLARE radlat1 DOUBLE;
@@ -25,7 +25,7 @@ END
 -- Create table for re:Invent venues
 --
 
-DROP TABLE IF EXISTS `reinvent_venues`
+DROP TABLE IF EXISTS `reinvent_venues`;
 CREATE TABLE `reinvent_venues` (
   `venue` varchar(100) NOT NULL,
   `latitude` double NOT NULL,
@@ -42,5 +42,4 @@ INSERT INTO `reinvent_venues` (venue,latitude,longitude) VALUES
 ,('Venetian',36.1212,115.1697)
 ,('Mirage',36.1212,115.1741)
 ,('Bellagio',36.1126,115.1767)
-,('MGM',36.1026,115.1703)
-;
+,('MGM',36.1026,115.1703);

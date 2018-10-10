@@ -2,7 +2,7 @@
 -- Create table for re:Invent interested sessions
 --
 
-DROP TABLE IF EXISTS ``
+DROP TABLE IF EXISTS `reinvent_interests`;
 CREATE TABLE `reinvent_interests` (
   `session_code` varchar(100) NOT NULL,
   `session_title` varchar(2048) DEFAULT NULL,
